@@ -26,6 +26,8 @@
 | Revenue Stats | Financial reporting metric | System Aggregator | Management / Admin | Yes |
 
 ---
+## Activity 3: Data Flow Diagram
+
 ===================================================================
                   SECURE RETAIL SYSTEM DATA FLOW
 ===================================================================
