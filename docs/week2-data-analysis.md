@@ -27,47 +27,35 @@
 
 ---
 ## Activity 3: Data Flow Diagram
-
-===================================================================
-                  SECURE RETAIL SYSTEM DATA FLOW
-===================================================================
-
-[ Customer / Admin ]
-        │
-        │ 1. Account Credentials & Search Queries
-        ▼
-┌──────────────────┐
-│   User Interface │
-│   (Frontend MVP) │
-└────────┬─────────┘
-         │
-         │ 2. API Requests (Product Selection / Cart Items)
-         ▼
-┌──────────────────┐
-│  Shopping Cart   ├──────► [ Stock Level Validation ]
-│     Service      │
-└────────┬─────────┘
-         │
-         │ 3. Checkout Data & Shipping Address
-         ▼
-┌──────────────────┐
-│ Order Processing │ ◄────► [ Payment Gateway API ]
-│     Service      │        (Verifies & Confirms Payment Status)
-└────────┬─────────┘
-         │
-         │ 4. Order Records & Transaction Logs
-         ▼
-┌──────────────────┐
-│ Secure Database  │
-│    (MongoDB /    │
-│    PostgreSQL)   │
-└────────┬─────────┘
-         │
-         ├───────────────────────────────┐
-         │ 5a. Order ID & Status         │ 5b. Metrics & Sales Data
-         ▼                               ▼
-┌──────────────────┐            ┌──────────────────┐
-│  Order Tracking  │            │ Admin Dashboard  │
-│  (Customer View) │            │   & Analytics    │
-└──────────────────┘            └──────────────────┘
-
+```text
+┌─────────────────────────────────────────────────────────┐
+│                    CUSTOMER / ADMIN                     │
+└────────────────────────────┬────────────────────────────┘
+                             │ 1. Credentials & Queries
+                             ▼
+┌─────────────────────────────────────────────────────────┐
+│                     USER INTERFACE                      │
+└────────────────────────────┬────────────────────────────┘
+                             │ 2. Selection & Cart Requests
+                             ▼
+┌─────────────────────────────────────────────────────────┐
+│                   SHOPPING CART SERVICE                 │
+│                 └─► [Stock Level Validation]            │
+└────────────────────────────┬────────────────────────────┘
+                             │ 3. Checkout & Shipping Data
+                             ▼
+┌─────────────────────────────────────────────────────────┐
+│                   ORDER PROCESSING SERVICE              │
+│                 ◄─► [Payment Gateway API]               │
+└────────────────────────────┬────────────────────────────┘
+                             │ 4. Order Records & Logs
+                             ▼
+┌─────────────────────────────────────────────────────────┐
+│                    SECURE DATABASE                      │
+└───────────────┬─────────────────────────┬───────────────┘
+                │ 5a. Order ID            │ 5b. Metrics
+                ▼                         ▼
+┌───────────────────────────────┐ ┌───────────────────────┐
+│        ORDER TRACKING         │ │    ADMIN DASHBOARD    │
+└───────────────────────────────┘ └───────────────────────┘
+```
