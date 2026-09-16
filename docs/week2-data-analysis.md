@@ -85,3 +85,5 @@
 * **Restricted Access:** Admin privileges, financial revenue metrics, database credentials, and customer personal details.
 * **Future Reporting Needs:** Monthly sales trends, top-selling categories, user conversion rates, and inventory alerts.
 * **Capstone B v2 Expansion:** Support for multi-currency transactions, third-party logistics integrations, and AI product recommendations.
+
+@SHEA 2026
