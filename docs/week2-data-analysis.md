@@ -86,4 +86,40 @@
 * **Future Reporting Needs:** Monthly sales trends, top-selling categories, user conversion rates, and inventory alerts.
 * **Capstone B v2 Expansion:** Support for multi-currency transactions, third-party logistics integrations, and AI product recommendations.
 
-@SHEA 2026
+Section 2: Project Data Investigation
+
+| Data Item            | Purpose                          | Creator         | User            | Importance |
+| -------------------- | -------------------------------- | --------------- | --------------- | ---------- |
+| Product ID           | Uniquely identifies each product | Admin/System    | System          | High       |
+| Product Name         | Displays the product name        | Admin           | Customer        | High       |
+| Product Description  | Provides product information     | Admin           | Customer        | High       |
+| Product Price        | Displays the selling price       | Admin           | Customer/System | High       |
+| Product Category     | Groups products for browsing     | Admin           | Customer        | High       |
+| Product Image        | Shows the product visually       | Admin           | Customer        | Medium     |
+| Stock Quantity       | Shows product availability       | Admin/System    | Customer/Admin  | High       |
+| Customer Information | Stores customer details          | Customer        | System/Admin    | High       |
+| Shopping Cart Data   | Stores selected products         | Customer/System | Customer        | High       |
+| Order Data           | Records completed purchases      | Customer/System | Customer/Admin  | High       |
+
+User Research Participants
+| Participant | Role                 | Main Feedback                                                                                                                                                                                   |
+| ----------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Rahul**   | Team Member  | Wants to find products quickly. Search and filters are important. Product pages should clearly show price, image, description and availability.                                                 |
+| **Sujan**   | Team Member  | Checks product details and price before adding something to the cart. Stock availability is important. Wants a simple cart where products can be added, removed or have their quantity changed. |
+| **Sandesh** | Team Member  | Wants the shopping website to be simple and easy to use. Product information should be clear, and customer information should be protected.     
+
+
+| User Gap                        | Research Finding                                                      | Project Requirement                                                                   |
+| ------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| **Finding products quickly**    | Users do not want to spend too much time looking through products.    | Product search should be included.                                                    |
+| **Finding specific products**   | Users need to narrow down products when there are many options.       | Categories, filters and sorting should be available.                                  |
+| **Unclear product information** | Users want to know what they are buying before adding it to the cart. | Product name, image, description and price should be clearly displayed.               |
+| **Unclear availability**        | Users need to know whether a product is available before purchasing.  | Stock quantity/availability should be shown.                                          |
+| **Difficult cart management**   | Users want to easily change quantities or remove products.            | Cart should support add, remove and quantity changes.                                 |
+| **Too much complexity**         | Users prefer a simple shopping process.                               | Navigation and main shopping functions should be straightforward.                     |
+| **Customer data protection**    | Users expect their personal information to be protected.              | Customer information should have restricted access and appropriate security controls. |
+
+
+
+
+
