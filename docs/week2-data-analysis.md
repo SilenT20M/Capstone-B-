@@ -104,9 +104,9 @@ Section 2: Project Data Investigation
 User Research Participants
 | Participant | Role                 | Main Feedback                                                                                                                                                                                   |
 | ----------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Rahul**   | Team Member / Friend | Wants to find products quickly. Search and filters are important. Product pages should clearly show price, image, description and availability.                                                 |
-| **Sujan**   | Team Member / Friend | Checks product details and price before adding something to the cart. Stock availability is important. Wants a simple cart where products can be added, removed or have their quantity changed. |
-| **Sandesh** | Team Member / Friend | Wants the shopping website to be simple and easy to use. Product information should be clear, and customer information should be protected.     
+| **Rahul**   | Team Member  | Wants to find products quickly. Search and filters are important. Product pages should clearly show price, image, description and availability.                                                 |
+| **Sujan**   | Team Member  | Checks product details and price before adding something to the cart. Stock availability is important. Wants a simple cart where products can be added, removed or have their quantity changed. |
+| **Sandesh** | Team Member  | Wants the shopping website to be simple and easy to use. Product information should be clear, and customer information should be protected.     
 
 
 | User Gap                        | Research Finding                                                      | Project Requirement                                                                   |
