@@ -101,5 +101,21 @@ Section 2: Project Data Investigation
 | Shopping Cart Data   | Stores selected products         | Customer/System | Customer        | High       |
 | Order Data           | Records completed purchases      | Customer/System | Customer/Admin  | High       |
 
+User Research Participants
+| Participant | Role                 | Main Feedback                                                                                                                                                                                   |
+| ----------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Rahul**   | Team Member / Friend | Wants to find products quickly. Search and filters are important. Product pages should clearly show price, image, description and availability.                                                 |
+| **Sujan**   | Team Member / Friend | Checks product details and price before adding something to the cart. Stock availability is important. Wants a simple cart where products can be added, removed or have their quantity changed. |
+| **Sandesh** | Team Member / Friend | Wants the shopping website to be simple and easy to use. Product information should be clear, and customer information should be protected.                                                     |
+User Gaps Identified
+| User Gap                        | Research Finding                                                      | Project Requirement                                                                   |
+| ------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| **Finding products quickly**    | Users do not want to spend too much time looking through products.    | Product search should be included.                                                    |
+| **Finding specific products**   | Users need to narrow down products when there are many options.       | Categories, filters and sorting should be available.                                  |
+| **Unclear product information** | Users want to know what they are buying before adding it to the cart. | Product name, image, description and price should be clearly displayed.               |
+| **Unclear availability**        | Users need to know whether a product is available before purchasing.  | Stock quantity/availability should be shown.                                          |
+| **Difficult cart management**   | Users want to easily change quantities or remove products.            | Cart should support add, remove and quantity changes.                                 |
+| **Too much complexity**         | Users prefer a simple shopping process.                               | Navigation and main shopping functions should be straightforward.                     |
+| **Customer data protection**    | Users expect their personal information to be protected.              | Customer information should have restricted access and appropriate security controls. |
 
-@SHEA 2026
+
