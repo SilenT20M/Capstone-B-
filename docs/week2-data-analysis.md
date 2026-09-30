@@ -108,8 +108,8 @@ User Research Participants
 | **Sujan**   | Team Member / Friend | Checks product details and price before adding something to the cart. Stock availability is important. Wants a simple cart where products can be added, removed or have their quantity changed. |
 | **Sandesh** | Team Member / Friend | Wants the shopping website to be simple and easy to use. Product information should be clear, and customer information should be protected.                                                     |
 User Gaps Identified
-| User Gap                        | Research Finding                                                      | Project Requirement                                                                   |
-| ------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| User Gap                        | Research Finding                                                      | Project Requirement                                                           |
+
 | **Finding products quickly**    | Users do not want to spend too much time looking through products.    | Product search should be included.                                                    |
 | **Finding specific products**   | Users need to narrow down products when there are many options.       | Categories, filters and sorting should be available.                                  |
 | **Unclear product information** | Users want to know what they are buying before adding it to the cart. | Product name, image, description and price should be clearly displayed.               |
