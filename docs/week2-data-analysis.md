@@ -88,16 +88,18 @@
 
 Section 2: Project Data Investigation
 
-Data Item	Purpose	Creator	User	Importance
-Product ID	Uniquely identifies each product	Admin/System	System	High
-Product Name	Displays the product name	Admin	Customer	High
-Product Description	Provides product information	Admin	Customer	High
-Product Price	Displays the selling price	Admin	Customer/System	High
-Product Category	Groups products for browsing	Admin	Customer	High
-Product Image	Shows the product visually	Admin	Customer	Medium
-Stock Quantity	Shows product availability	Admin/System	Customer/Admin	High
-Customer Information	Stores customer details	Customer	System/Admin	High
-Shopping Cart Data	Stores selected products	Customer/System	Customer	High
-Order Data	Records completed purchases	Customer/System	Customer/Admin	High
+| Data Item            | Purpose                          | Creator         | User            | Importance |
+| -------------------- | -------------------------------- | --------------- | --------------- | ---------- |
+| Product ID           | Uniquely identifies each product | Admin/System    | System          | High       |
+| Product Name         | Displays the product name        | Admin           | Customer        | High       |
+| Product Description  | Provides product information     | Admin           | Customer        | High       |
+| Product Price        | Displays the selling price       | Admin           | Customer/System | High       |
+| Product Category     | Groups products for browsing     | Admin           | Customer        | High       |
+| Product Image        | Shows the product visually       | Admin           | Customer        | Medium     |
+| Stock Quantity       | Shows product availability       | Admin/System    | Customer/Admin  | High       |
+| Customer Information | Stores customer details          | Customer        | System/Admin    | High       |
+| Shopping Cart Data   | Stores selected products         | Customer/System | Customer        | High       |
+| Order Data           | Records completed purchases      | Customer/System | Customer/Admin  | High       |
+
 
 @SHEA 2026
