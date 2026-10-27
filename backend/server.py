@@ -26,93 +26,49 @@ class CapstoneHandler(BaseHTTPRequestHandler):
             })
 
         elif self.path == "/api/health":
-            self.send_json(200, {
-                "status": "healthy"
-            })
+            self.send_json(200, {"status": "healthy"})
 
         elif self.path == "/api/products":
-            try:
-                with sqlite3.connect(DATABASE_PATH) as connection:
-                    connection.row_factory = sqlite3.Row
-                    rows = connection.execute(
-                        "SELECT * FROM Product"
-                    ).fetchall()
-
-                products = [dict(row) for row in rows]
-                self.send_json(200, {
-                    "count": len(products),
-                    "products": products
-                })
-
-            except sqlite3.Error as error:
-                self.send_json(500, {
-                    "error": "Database query failed",
-                    "details": str(error)
-                })
+            table = "Product"
+            key = "products"
 
         elif self.path == "/api/categories":
-            try:
-                with sqlite3.connect(DATABASE_PATH) as connection:
-                    connection.row_factory = sqlite3.Row
-                    rows = connection.execute(
-                        "SELECT * FROM Category"
-                    ).fetchall()
-
-                categories = [dict(row) for row in rows]
-                self.send_json(200, {
-                    "count": len(categories),
-                    "categories": categories
-                })
-
-            except sqlite3.Error as error:
-                self.send_json(500, {
-                    "error": "Database query failed",
-                    "details": str(error)
-                })
+            table = "Category"
+            key = "categories"
 
         elif self.path == "/api/customers":
-            try:
-                with sqlite3.connect(DATABASE_PATH) as connection:
-                    connection.row_factory = sqlite3.Row
-                    rows = connection.execute(
-                        "SELECT * FROM Customer"
-                    ).fetchall()
-
-                customers = [dict(row) for row in rows]
-                self.send_json(200, {
-                    "count": len(customers),
-                    "customers": customers
-                })
-
-            except sqlite3.Error as error:
-                self.send_json(500, {
-                    "error": "Database query failed",
-                    "details": str(error)
-                })
+            table = "Customer"
+            key = "customers"
 
         elif self.path == "/api/orders":
-            try:
-                with sqlite3.connect(DATABASE_PATH) as connection:
-                    connection.row_factory = sqlite3.Row
-                    rows = connection.execute(
-                        "SELECT * FROM CustomerOrder"
-                    ).fetchall()
+            table = "CustomerOrder"
+            key = "orders"
 
-                orders = [dict(row) for row in rows]
-                self.send_json(200, {
-                    "count": len(orders),
-                    "orders": orders
-                })
-
-            except sqlite3.Error as error:
-                self.send_json(500, {
-                    "error": "Database query failed",
-                    "details": str(error)
-                })
+        elif self.path == "/api/order-items":
+            table = "OrderItem"
+            key = "order_items"
 
         else:
-            self.send_json(404, {
-                "error": "Endpoint not found"
+            self.send_json(404, {"error": "Endpoint not found"})
+            return
+
+        try:
+            with sqlite3.connect(DATABASE_PATH) as connection:
+                connection.row_factory = sqlite3.Row
+                rows = connection.execute(
+                    f"SELECT * FROM {table}"
+                ).fetchall()
+
+            records = [dict(row) for row in rows]
+            self.send_json(200, {
+                "count": len(records),
+                key: records
+            })
+
+        except sqlite3.Error as error:
+            self.send_json(500, {
+                "error": "Database query failed",
+                "details": str(error)
             })
 
 
