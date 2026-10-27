@@ -48,6 +48,26 @@ class CapstoneHandler(BaseHTTPRequestHandler):
                     "details": str(error)
                 })
 
+        elif self.path == "/api/categories":
+            try:
+                with sqlite3.connect(DATABASE_PATH) as connection:
+                    connection.row_factory = sqlite3.Row
+                    rows = connection.execute(
+                        "SELECT * FROM Category"
+                    ).fetchall()
+
+                categories = [dict(row) for row in rows]
+                self.send_json(200, {
+                    "count": len(categories),
+                    "categories": categories
+                })
+
+            except sqlite3.Error as error:
+                self.send_json(500, {
+                    "error": "Database query failed",
+                    "details": str(error)
+                })
+
         else:
             self.send_json(404, {"error": "Endpoint not found"})
 
