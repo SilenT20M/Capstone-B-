@@ -26,7 +26,9 @@ class CapstoneHandler(BaseHTTPRequestHandler):
             })
 
         elif self.path == "/api/health":
-            self.send_json(200, {"status": "healthy"})
+            self.send_json(200, {
+                "status": "healthy"
+            })
 
         elif self.path == "/api/products":
             try:
@@ -68,11 +70,36 @@ class CapstoneHandler(BaseHTTPRequestHandler):
                     "details": str(error)
                 })
 
+        elif self.path == "/api/customers":
+            try:
+                with sqlite3.connect(DATABASE_PATH) as connection:
+                    connection.row_factory = sqlite3.Row
+                    rows = connection.execute(
+                        "SELECT * FROM Customer"
+                    ).fetchall()
+
+                customers = [dict(row) for row in rows]
+                self.send_json(200, {
+                    "count": len(customers),
+                    "customers": customers
+                })
+
+            except sqlite3.Error as error:
+                self.send_json(500, {
+                    "error": "Database query failed",
+                    "details": str(error)
+                })
+
         else:
-            self.send_json(404, {"error": "Endpoint not found"})
+            self.send_json(404, {
+                "error": "Endpoint not found"
+            })
 
 
 if __name__ == "__main__":
     server = HTTPServer(("localhost", 8000), CapstoneHandler)
-    print("Capstone B backend running at http://localhost:8000", flush=True)
+    print(
+        "Capstone B backend running at http://localhost:8000",
+        flush=True
+    )
     server.serve_forever()
